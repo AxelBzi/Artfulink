@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+@font-face{
+    font-family: "vontjack";
+    src: url(/font/Vontjack.otf);
+}
+
 a{
     text-decoration: none;
 }
@@ -11,7 +17,7 @@ body{
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     background-color: #11597a;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 ul{
@@ -39,7 +45,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 5%;
+    margin: 20px 2.5%;
     flex-wrap: wrap;
 }
 
@@ -48,8 +54,7 @@ ul{
     margin: 0;
 }
 
-nav ul li a{
-
+.nav a{
     padding: 0px 20px;
     color: #F1F6F9;
     font-weight: 600;
@@ -65,8 +70,9 @@ nav i{
     padding: 0px 10px;
 }
 
+
+
 .fa-brands{
-    display: flex;
     color: #F1F6F9;
     font-size: 1.2em;
 }
@@ -76,6 +82,7 @@ nav i{
 }
 
 footer{
+    
     background-color: #191717;
     display: flex;
     flex-direction: column;
@@ -85,6 +92,7 @@ footer{
     width: 100%;
     min-height: 100px;
     margin-top: auto;
+
 }
 
 footer .titulo-footer,footer .copy, .informacion{
@@ -92,30 +100,36 @@ footer .titulo-footer,footer .copy, .informacion{
 }
 
 
-.copy{
-    margin-top: auto;
-}
 
-footer .fa-solid{
-    font-size: 1.3em;
-}
 
 .info-footer{
     font-size: 1em;
+    
+    width: auto;
 }
 
 .footer-item{
     display: flex;
-    gap: 10px;
-    margin: 10px 10%;
     flex-wrap: wrap;
+    gap: 5px;
+    
+    /* flex-wrap: wrap; */
+}
+
+.fa-solid{
+    
+    font-size: 1.3em;
 }
 
 .informacion{
+    margin-top: auto;
+    
     width: 100%;
     display: flex;
-    margin-top: auto;
-    justify-content: center;
+    gap: 5px;
+    justify-content: space-around;
+    flex-direction: row;
+
    
 }
 
@@ -129,8 +143,57 @@ footer .fa-solid{
 }
 
 .copy{
+    background-color: #2d2d2e;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    font-size: 0.9em;
+    margin-top: auto;
 }
 
+.brazo-fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 85vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/brazo-tatuado.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.titulo{
+    color: white;
+    font-size: 4em;
+    font-family: vontjack;
+}
+
+.redes a i{
+    font-size: 1.3em;
+}
+.redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 10%;
+    min-height: 30px;
+}
+
+.titulo span{
+    color: #19A7CE;
+}
+
+@keyframes entrada{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.titulo{
+    animation: entrada 1.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
