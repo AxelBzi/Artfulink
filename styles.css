@@ -116,7 +116,7 @@ footer .titulo-footer,footer .copy, .informacion{
     /* flex-wrap: wrap; */
 }
 
-.fa-solid{
+.footer-item i{
     
     font-size: 1.3em;
 }
@@ -156,7 +156,7 @@ footer .titulo-footer,footer .copy, .informacion{
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    min-height: 85vh;
+    min-height: 90vh;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/brazo-tatuado.jpg);
     background-size: cover;
     background-position: center;
@@ -196,4 +196,126 @@ footer .titulo-footer,footer .copy, .informacion{
 
 .titulo{
     animation: entrada 1.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+/* ----------------Reviews -----------------------*/
+
+#reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #e3e2e2;
+}
+
+.titulo-reviews{
+
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    font-size: 1.3em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.reviews-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.review-box{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    width: 500px;
+    min-height: 215px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+    
+
+}
+
+.imagen-perfil{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.imagen-perfil img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+}
+
+.usuario-nombre{
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario-nombre strong{
+    color: #060606;
+    font-size: 1.1em;
+    font-weight: 500;
+    /* letter-spacing: 0.5px; */
+}
+
+.usuario-nombre span{
+    color: #909090;
+    font-size: 0.8em;
+}
+
+.review{
+    color: #f2e71b;
+}
+
+.review-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comentario p{
+    font-style: italic;
+    font-size: 0.9em;
+    color: #373636;
+    letter-spacing: 0.5spx;
+}
+
+.caja{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+@media(max-width:1064px){
+    .reviews-contenedor{
+        width: 45%;
+        padding: 10px;;
+    }
+}
+
+@media(max-width:700px){
+    .reviews-contenedor{
+        width: 100%;
+        padding: 10px;;
+    }
 }
