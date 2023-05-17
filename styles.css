@@ -319,3 +319,120 @@ footer .titulo-footer,footer .copy, .informacion{
         padding: 10px;;
     }
 }
+/* ----------------Formulario -----------------------*/
+/* --------------------------------------------------*/
+
+
+.formu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #191717
+    
+  }
+
+  .imagen {
+    position: relative;
+    flex: 1;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/Fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    height: 100%;
+    opacity: 0.5;
+  }
+
+  .texto-animado {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    font-size: 3em;
+    font-family: "vontjack";
+    animation: entrada 1.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    max-width: 100%;
+}
+@media (max-width: 700px) {
+    .texto-animado {
+        font-size: 2em; 
+    }
+}
+  
+  
+  .texto-animado h2{
+    color: #F1F6F9;
+  }
+  .texto-animado span{
+    color: #19A7CE;
+  }
+  
+  .formulario {
+    flex: 1;
+    background-color: #191717;
+    color: white;
+    font-family:'Roboto', sans-serif;
+    padding: 40px;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .formulario h1 {
+    text-align: center;
+  }
+  
+  .formulario div {
+    margin-bottom: 20px;
+  }
+  
+  .formulario label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .formulario .control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .formulario .boton {
+    background-color:#191717;
+    color:#FFFFFF; ;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
+  .boton {
+    background-color: #191717;
+    color: #FFFFFF;
+  }
+  .boton:hover {
+    background-color: #19A7CE;
+    color: #FFFFFF;
+  }
+  
+  /* ------------------------------------------------*/
+  /* --------------------------------------------------*/
