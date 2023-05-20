@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tpo proyecto</title>
+    <title>Tpo proyecto</title> 
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/858b63dd60.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,22 +15,64 @@
 <body>
     <header>
         <nav>
-            <!-- <a href="" class="logo"><i class="fa-solid fa-pen-nib"></i>Logo</a> -->
+            <!--<a href="" class="logo"><i class="fa-solid fa-pen-nib"></i>Logo</a>-->
             <ul class="nav">
                 <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/about-us.html">Sobre Nosotros</a></li>
                 <li><a href="/trabajos.html">Trabajos</a></li>
                 <li><a href="/contacto.html">Contacto</a></li>
             </ul>
-            <ul class="redes">
-                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>     
+            <ul>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="prueba"><h2>Contacto</h2></div>
+        <!----- Formulario ------>
+        <!----------------------->
+    <main class="formu">
+        
+        <div class="imagen"></div>
+        <div class="texto-animado">
+            <h2>Artful <span>Ink</span></h2>
+          </div>
+        <section class="formulario">
+            
+            <form  action="" name="formulario" method="post">
+                <h1>DEJANOS TU CONSULTA</h1>
+                <div>
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div>
+                    <input class="control" type="text" name="nombre" id="nombre" maxlength="30">
+                </div>
+                <div>
+                    <label for="apellido">Apellido</label>
+                </div>
+                <div>
+                    <input class="control" type="text" name="apellido" id="apellido" maxlength="30" >
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                </div>
+                <div>
+                    <input class="control" type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                </div>
+                <div>
+                    <textarea class="control" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <input class="boton" type="submit" id="btn" name="btn" value="Enviar">
+                </div>
+            </form>
+            
+            
+        </section>
     </main>
     <footer>
         <div class="informacion">
@@ -40,5 +82,8 @@
         </div>
             <p class="copy">&copy; 2023 Derechos reservados</p>
     </footer>
+    
+    <script src="contacto.js"></script>
+
 </body>
 </html>
