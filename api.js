@@ -1,20 +1,26 @@
-const generarusuario = async() =>{
-    const url = "https://randomuser.me/api/?results=4"
+const generarusuario = async () => {
+    const url = "https://randomuser.me/api/?results=4";
     const respuesta = await fetch(url);
-    const {results} = await respuesta.json();
-    console.log(results);
-    fotouser1.src = results[0].picture.medium
-    nombre1.textContent = results[0].name.first + results[0].name.last
-    username1.textContent = "@" + results[0].login.username
-    fotouser2.src = results[1].picture.medium
-    nombre2.textContent = results[1].name.first + results[1].name.last
-    username2.textContent = "@" + results[1].login.username
-    fotouser3.src = results[2].picture.medium
-    nombre3.textContent = results[2].name.first + results[2].name.last
-    username3.textContent = "@" + results[2].login.username
-    fotouser4.src = results[3].picture.medium
-    nombre4.textContent = results[3].name.first + results[3].name.last
-    username4.textContent = "@" + results[3].login.username
-}
+    const { results } = await respuesta.json();
+  
+    for (let i = 0; i < results.length; i++) {
+      const user = results[i];
+      const fotouser = document.getElementById(`fotouser${i + 1}`);
+      const nombre = document.getElementById(`nombre${i + 1}`);
+      const username = document.getElementById(`username${i + 1}`);
+  
+      fotouser.src = user.picture.medium;
+      nombre.textContent = user.name.first +" " + user.name.last;
+      username.textContent = "@" + user.login.username;
+    }
+  };
+
 
 document.addEventListener("DOMContentLoaded", generarusuario)
+
+
+ham = document.querySelector(".menu-ham");
+ham.onclick = function(){
+    nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+}
