@@ -3,25 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+@font-face{
+    font-family: "vontjack";
+    src: url(/font/Vontjack.otf);
+}
+
 a{
     text-decoration: none;
 }
 body{
-    display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     background-color: #11597a;
-    min-height: 100vh;
+
 }
 
-ul{
-    display:flex;
-}
-
-
-nav ul li{
-    list-style-type: none;
-}
 .logo{
     color: #FFFF;
     font-size: 1.5em;
@@ -29,18 +26,13 @@ nav ul li{
 }
 
 header{
-    border-bottom: thin solid #9BA4B5;
-    /* position: fixed; */
     width: 100%;
-    background-color: #191717;
-}
-nav{
-
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 5%;
-    flex-wrap: wrap;
+    padding: 0 100px;
+    background-color: #191717;
 }
 
 ul{
@@ -48,25 +40,7 @@ ul{
     margin: 0;
 }
 
-nav ul li a{
-
-    padding: 0px 20px;
-    color: #F1F6F9;
-    font-weight: 600;
-    font-size: 1.2em;
-    
-}
-
-nav ul li a:hover{
-    color: #19A7CE;
-}
-
-nav i{
-    padding: 0px 10px;
-}
-
 .fa-brands{
-    display: flex;
     color: #F1F6F9;
     font-size: 1.2em;
 }
@@ -83,8 +57,9 @@ footer{
     justify-content: center;
     border-top: solid 1px #9BA4B5;
     width: 100%;
-    min-height: 100px;
+    min-height: 80px;
     margin-top: auto;
+
 }
 
 footer .titulo-footer,footer .copy, .informacion{
@@ -92,31 +67,31 @@ footer .titulo-footer,footer .copy, .informacion{
 }
 
 
-.copy{
-    margin-top: auto;
-}
 
-footer .fa-solid{
-    font-size: 1.3em;
-}
 
 .info-footer{
     font-size: 1em;
+    
+    width: auto;
 }
 
 .footer-item{
     display: flex;
-    gap: 10px;
-    margin: 10px 10%;
     flex-wrap: wrap;
+    gap: 5px;
+}
+
+.footer-item i{ 
+    font-size: 1.3em;
 }
 
 .informacion{
+    margin-top: auto;
     width: 100%;
     display: flex;
-    margin-top: auto;
-    justify-content: center;
-   
+    gap: 5px;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 .prueba{
@@ -125,12 +100,597 @@ footer .fa-solid{
     justify-content: center;
     align-items: center;
     min-height: 1400px;
-
 }
 
 .copy{
+    background-color: #2d2d2e;
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+.brazo-fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/brazo-tatuado.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.titulo{
+    color: white;
+    font-size: 4em;
+    font-family: vontjack;
+}
+
+
+
+.titulo span{
+    color: #19A7CE;
+}
+/* ------------------------Animacion------------------------ */
+@keyframes entrada{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.titulo{
+    animation: entrada 1.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+/* ----------------Reviews -----------------------*/
+
+#reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #e3e2e2;
+}
+
+.titulo-reviews{
+
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    font-size: 1.3em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.reviews-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.review-box{
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    width: 500px;
+    min-height: 215px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+    
+
+}
+
+.imagen-perfil{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.imagen-perfil img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+}
+
+.usuario-nombre{
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario-nombre strong{
+    color: #060606;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.usuario-nombre span{
+    color: #909090;
+    font-size: 0.8em;
+}
+
+.review{
+    color: #f2e71b;
+}
+
+.review-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comentario p{
+    font-style: italic;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #151515;
+    letter-spacing: 0.5spx;
+}
+
+.caja{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+
+
+
+/* ----------------Formulario -----------------------*/
+/* --------------------------------------------------*/
+
+
+.formu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #191717
+    
+  }
+
+  .imagen {
+    position: relative;
+    flex: 1;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .imagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/Fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%; 
+    height: 100%;
+    opacity: 0.5;
+  }
+
+  .texto-animado {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    font-size: 3em;
+    font-family: "vontjack";
+    animation: entrada 1.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    max-width: 100%;
+}
+
+  
+  
+  .texto-animado h2{
+    color: #F1F6F9;
+  }
+  .texto-animado span{
+    color: #19A7CE;
+  }
+  
+  .formulario {
+    flex: 1;
+    background-color: #191717;
+    color: white;
+    font-family:'Roboto', sans-serif;
+    padding: 40px;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .formulario h1 {
+    text-align: center;
+  }
+  
+  .formulario div {
+    margin-bottom: 20px;
+  }
+  
+  .formulario label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .formulario .control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .formulario .boton {
+    background-color:#191717;
+    color:#FFFFFF; ;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
+  .boton {
+    background-color: #191717;
+    color: #FFFFFF;
+  }
+  .boton:hover {
+    background-color: #19A7CE;
+    color: #FFFFFF;
+  }
+  
+  /* ------------------------------------------------*/
+  /* -----------------Nav responsive----------------*/
+
+  .menu-ham{
+    display: none;
+}
+
+.titulo-ham{
+    display:none;
+}
+
+.titulo-ham span{
+    font-family: "vontjack";
+    color: #F1F6F9;
+    font-size: 2.5em;
+}
+
+
+
+
+
+nav ul{
+    display: flex;
+}
+nav ul li a{
+    display: block;
+    color: #e3e2e2;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a:hover{
+    color: #19A7CE;
+    background: #cfcdcd;
+}
+
+nav ul li a.active{
+    color: #000000;
+    background: #cfcdcd;
+}
+
+.redes i{
+    font-size: 1.4em;
+}
+.redes ul{
+    display: flex;
+    list-style: none;
+}
+.redes li{
+    margin: 15px;
+}
+
+/* ------------------------------------------------*/
+/* ----------------Sobre nosotros-------------------*/
+
+  .contenedor{
+    /*position: relative;*/
+    width: 1400px;
+    height:99vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/tatuador.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    border-bottom: solid 2px #19A7CE;
+  }
+
+ .contenedor p{
+    /*margin-top: 2%;
+    margin-right: 4em;
+    margin-left: 4em;*/
+    color:#19A7CE;
+    /* text-align: justify; */
+    /*margin:20px 4%;*/
+    /* padding: 2px 4%; */
+    font-size: 1.5em;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  div .largo{
+    color: white;
+  }
+
+  .pre-conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 49%;
+    margin-top: 70px;
+  }
+
+  .premisas{
+    text-align: start;
+    width: 200px;
+    text-shadow: 1px 1px 5px rgb(79, 78, 78);
+  }
+  
+
+  .descripcion{
+    margin-top: 5%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 49%;
+  }
+  .descripcion :first-child{
+    text-align: center;
+  }
+  .descripcion span{
+    color: #F1F6F9;
+  }
+
+  .titulo span{
+    color: #19A7CE;
+}
+
+  /* ------------------------------------------------*/
+  /* --------------------Trabajos----------------------------*/
+
+.grid-item{
+    background-color: #19A7CE;
+    border: solid 1px white;
+    /* background-position: center;
+    background-size: cover; */
+    border-radius: 5px;
+    /* background-repeat: no-repeat; */
+  }
+
+.grid-item  img{
+    width: 100%;
+}
+
+.grid-container{
+    height: 99vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px,auto);
+    gap: 10px;
+    padding: 15px;
+    grid-auto-flow: dense;
+}
+
+.grid-item:hover{
+    scale: 1.1;
+}
+/* ------------------------------------------------*/
+
+.grid-container div:first-child{
+    background: url(/img/trabajos/tt.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(2){
+    background: url(/img/trabajos/t10.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(3){
+    background: url(/img/trabajos/t3.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(4){
+    background: url(/img/trabajos/t6.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.grid-container div:nth-child(5){
+    background: url(/img/trabajos/t7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(6){
+    background: url(/img/trabajos/t2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(7){
+    background: url(/img/trabajos/t4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(8){
+    background: url(/img/trabajos/t5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(9){
+    background: url(/img/trabajos/t8.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(10){
+    background: url(/img/trabajos/t9.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ------------------------------------------------*/
+@media (min-width: 600px){
+.ancho{
+    grid-column: span 2;
+}
+
+.alto{
+    grid-row: span 2;
+}
+}
+@media(min-width:1320px){
+    .grid-container{
+        min-height: 1000px;
+    }
+}
+@media(max-width:1060px){
+    .grid-container{
+        min-height: 2000px;
+    }
+}
+@media(max-width:550px){
+    .grid-container{
+        min-height: 2500px;
+    }
+}
+@media(max-width:1086px){
+    .reviews-contenedor{
+        width: 45%;
+        padding: 10px;;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .menu-ham{
+        display: block;
+        cursor: pointer;
+    }
+    .menu-ham .linea{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+    nav{
+        z-index:3;
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #191717;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    nav ul{
+        display: block;
+        width: fit-content;
+        margin: 50px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav.active{
+        height: 270px;
+        width: 100%;
+    }
+
+    nav.active ul{
+        opacity: 1;
+    }
+
+    nav ul li a{
+        margin-bottom: 12px;
+    }
+    .titulo-ham{
+        display: block;
+    }
+    .reviews-contenedor{
+        width: 100%;
+        padding: 10px;;
+    }
+    .texto-animado {
+        font-size: 2em; 
+    }
+}
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:1100px){
+    header{
+        padding: 0 30px;
+    }
 }
 
