@@ -50,7 +50,6 @@ ul{
 }
 
 footer{
-    
     background-color: #191717;
     display: flex;
     flex-direction: column;
@@ -58,7 +57,7 @@ footer{
     justify-content: center;
     border-top: solid 1px #9BA4B5;
     width: 100%;
-    min-height: 100px;
+    min-height: 80px;
     margin-top: auto;
 
 }
@@ -107,7 +106,7 @@ footer .titulo-footer,footer .copy, .informacion{
     background-color: #2d2d2e;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 0.9em;
     margin-top: auto;
 }
@@ -244,7 +243,8 @@ footer .titulo-footer,footer .copy, .informacion{
 .comentario p{
     font-style: italic;
     font-size: 0.9em;
-    color: #373636;
+    font-weight: 500;
+    color: #151515;
     letter-spacing: 0.5spx;
 }
 
@@ -257,19 +257,9 @@ footer .titulo-footer,footer .copy, .informacion{
     max-width: 1400px;
 }
 
-@media(max-width:1064px){
-    .reviews-contenedor{
-        width: 45%;
-        padding: 10px;;
-    }
-}
 
-@media(max-width:900px){
-    .reviews-contenedor{
-        width: 100%;
-        padding: 10px;;
-    }
-}
+
+
 /* ----------------Formulario -----------------------*/
 /* --------------------------------------------------*/
 
@@ -312,11 +302,7 @@ footer .titulo-footer,footer .copy, .informacion{
     animation: entrada 1.3s cubic-bezier(0.215, 0.610, 0.355, 1);
     max-width: 100%;
 }
-@media (max-width: 900px) {
-    .texto-animado {
-        font-size: 2em; 
-    }
-}
+
   
   
   .texto-animado h2{
@@ -402,69 +388,9 @@ footer .titulo-footer,footer .copy, .informacion{
     font-size: 2.5em;
 }
 
-@media only screen and (max-width:1320px){
-    header{
-        padding: 0 50px;
-    }
-}
 
-@media only screen and (max-width:1100px){
-    header{
-        padding: 0 30px;
-    }
-}
 
-@media only screen and (max-width:900px){
-    .menu-ham{
-        display: block;
-        cursor: pointer;
-    }
-    .menu-ham .linea{
-        width: 30px;
-        height: 3px;
-        background: #fefefe;
-        margin: 6px 0;
-    }
-    nav{
-        height: 0;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        background: #191717;
-        transition: 0.5s;
-        overflow: hidden;
-    }
-    nav ul{
-        display: block;
-        width: fit-content;
-        margin: 80px auto 0 auto;
-        text-align: center;
-        transition: 0.5s;
-        opacity: 0;
-    }
-    .nav{
-        display: flex;
-        flex-direction: column;
-    }
 
-    nav.active{
-        height: 300px;
-    }
-
-    nav.active ul{
-        opacity: 1;
-    }
-
-    nav ul li a{
-        margin-bottom: 12px;
-        color: red;
-    }
-    .titulo-ham{
-        display: block;
-    }
-}
 
 nav ul{
     display: flex;
@@ -511,7 +437,7 @@ nav ul li a.active{
   .contenedor{
     /*position: relative;*/
     width: 1400px;
-    height:55vh;
+    height:99vh;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/tatuador.jpg);
     color: white;
     display: flex;
@@ -538,7 +464,7 @@ nav ul li a.active{
     color: white;
   }
 
-  .premisa{
+  .pre-conteiner{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -573,9 +499,198 @@ nav ul li a.active{
     color: #19A7CE;
 }
 
-@media only screen and (max-width:900px){
-    .contenedor{
-        height: 65vh;
+  /* ------------------------------------------------*/
+  /* --------------------Trabajos----------------------------*/
+
+.grid-item{
+    background-color: #19A7CE;
+    border: solid 1px white;
+    /* background-position: center;
+    background-size: cover; */
+    border-radius: 5px;
+    /* background-repeat: no-repeat; */
+  }
+
+.grid-item  img{
+    width: 100%;
+}
+
+.grid-container{
+    height: 99vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px,auto);
+    gap: 10px;
+    padding: 15px;
+    grid-auto-flow: dense;
+}
+
+.grid-item:hover{
+    scale: 1.1;
+}
+/* ------------------------------------------------*/
+
+.grid-container div:first-child{
+    background: url(/img/trabajos/tt.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(2){
+    background: url(/img/trabajos/t10.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(3){
+    background: url(/img/trabajos/t3.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(4){
+    background: url(/img/trabajos/t6.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.grid-container div:nth-child(5){
+    background: url(/img/trabajos/t7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(6){
+    background: url(/img/trabajos/t2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(7){
+    background: url(/img/trabajos/t4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(8){
+    background: url(/img/trabajos/t5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(9){
+    background: url(/img/trabajos/t8.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-container div:nth-child(10){
+    background: url(/img/trabajos/t9.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ------------------------------------------------*/
+@media (min-width: 600px){
+.ancho{
+    grid-column: span 2;
+}
+
+.alto{
+    grid-row: span 2;
+}
+}
+@media(min-width:1320px){
+    .grid-container{
+        min-height: 1000px;
     }
 }
-  /* ------------------------------------------------*/
+@media(max-width:1060px){
+    .grid-container{
+        min-height: 2000px;
+    }
+}
+@media(max-width:550px){
+    .grid-container{
+        min-height: 2500px;
+    }
+}
+@media(max-width:1086px){
+    .reviews-contenedor{
+        width: 45%;
+        padding: 10px;;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .menu-ham{
+        display: block;
+        cursor: pointer;
+    }
+    .menu-ham .linea{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+    nav{
+        z-index:3;
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #191717;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    nav ul{
+        display: block;
+        width: fit-content;
+        margin: 50px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav.active{
+        height: 270px;
+        width: 100%;
+    }
+
+    nav.active ul{
+        opacity: 1;
+    }
+
+    nav ul li a{
+        margin-bottom: 12px;
+    }
+    .titulo-ham{
+        display: block;
+    }
+    .reviews-contenedor{
+        width: 100%;
+        padding: 10px;;
+    }
+    .texto-animado {
+        font-size: 2em; 
+    }
+}
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+
